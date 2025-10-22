@@ -1,0 +1,1 @@
+## Small collection of decryption methods I found for games
