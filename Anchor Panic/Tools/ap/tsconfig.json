@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es2017"],
+    "experimentalDecorators": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "strict": false,
+    "skipLibCheck": true,
+    "sourceMap": true
+  },
+  "files": [ "agent/index.ts" ]
+}

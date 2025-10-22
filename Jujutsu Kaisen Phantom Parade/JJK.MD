@@ -3,6 +3,13 @@
 - OctCrypto - decrypts the octocacheevai files
 - SaveUtil - decrypts the excel files game uses
 
+## Note
+- these are only tested for global should work for jp as well (not tested)
+
+## Added
+- key.js dumps SaveUtil keys. you have to change the offsets for your version
+- a script to decrypt jp metadata (key changes per patch)
+
 ## Decrypt Metadata 
 Step 1 find where global-metadata is loaded
 

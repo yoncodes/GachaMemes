@@ -1,0 +1,23 @@
+{
+    "name": "frida-agent-example",
+    "version": "1.0.0",
+    "description": "Example Frida agent written in TypeScript",
+    "private": true,
+    "main": "agent/index.ts",
+    "scripts": {
+        "prepare": "npm run build",
+        "build": "frida-compile agent/index.ts -o _agent.js -c",
+        "watch": "frida-compile agent/index.ts -o _agent.js -w",
+        "attach": "run() { frida -U \"$1\" -l _agent.js --runtime=v8; }; run"
+    },
+    "devDependencies": {
+        "@types/frida-gum": "^18.5.1",
+        "esbuild": "^0.25.9",
+        "frida": "^16.1.3"
+    },
+    "dependencies": {
+        "@types/node": "^24.4.0",
+        "frida-compile": "^19.0.4",
+        "typescript": "^5.9.2"
+    }
+}
