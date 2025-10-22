@@ -1,0 +1,31 @@
+{
+    "EXTRACTOR_CONFIG": {
+        "search_dir": "assets/",
+        "index_path": "Lua/LuaScript_index.json",
+        "output_path": "extracted_lua",
+        "save_encrypted": false
+    },
+    "METADATA_CONFIG": {
+        "xapk_path": "\u65b0\u6708\u540c\u884c_1.1.41_APKPure.xapk",
+        "decrypt_path": "metadata/"
+    },
+    "LUA_DECRYPT_CONFIG": {
+        "lua_path": "extracted_lua/by_path/",
+        "output": "decompiled_lua/"
+    },
+    "DOWNLOADER_CONFIG": {
+        "download": true,
+        "workers": 8,
+        "filter": "Main_Details",
+        "json_only": false
+    },
+    "ASSET_CONFIG": {
+        "base_path": "downloads/assets/",
+        "output_path": "decrypted_bundles"
+    },
+    "PROTO_CONFIG": {
+        "file_path": "AssetBundles/25/d_1890480325.ab",
+        "proto_dir": "downloads/proto",
+        "output_dir": "proto"
+    }
+}

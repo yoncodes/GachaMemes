@@ -1,0 +1,4 @@
+protobuf==6.33.0
+pycryptodome==3.21.0
+Requests==2.32.5
+UnityPy==1.20.22
