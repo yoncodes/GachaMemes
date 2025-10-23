@@ -8,17 +8,19 @@
 
 ## Added
 - key.js dumps SaveUtil keys. you have to change the offsets for your version
-- a script to decrypt jp metadata (key changes per patch)
-- JP support added 
+- JP (as of 2.8.1)
 ```bash
   Password: TRya5qdkwKJNpLFDmyjstVeh
   Key: XhJdhn6iCRWw
 ```
-- Global
+- Global (as of 2.7.2)
 ```bash
   Password: hogehoge
   Key: hogehoge
 ```
+
+- a script to decrypt jp metadata (key changes per patch)
+
 
 ## Decrypt Metadata 
 Step 1 find where global-metadata is loaded
