@@ -22,7 +22,7 @@
 - a script to decrypt jp metadata (key changes per patch)
 
 
-## Decrypt Metadata 
+## Decrypt Metadata (Global)
 Step 1 find where global-metadata is loaded
 
 ```bash
