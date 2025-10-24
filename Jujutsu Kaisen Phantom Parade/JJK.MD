@@ -41,3 +41,7 @@ Step 1 build in VS 2022
 ```bash
   .\JJKPP.exe -i "path/to/xapk"
 ```
+Step 2 metadata will be here onced decrypted
+```bash
+  extracted/
+```
