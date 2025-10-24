@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj": {}
+    "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\OffsetFinder\\OffsetFinder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\OffsetFinder\\OffsetFinder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
         "projectName": "OffsetFinder",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\OffsetFinder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
