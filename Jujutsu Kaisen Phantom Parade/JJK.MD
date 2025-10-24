@@ -2,6 +2,7 @@
 - GhostAssets - decrypts the asset files
 - OctCrypto - decrypts the octocacheevai files
 - SaveUtil - decrypts the excel files game uses
+- JJKPP - Decrypts metadata for jp
 
 ## Note
 - these are only tested for global should work for jp as well
@@ -33,4 +34,10 @@ Step 2 Lets look for the decrypt function the game uses
 (dont forget to change the offset)
 ```bash
   Run the frida script dump_metadata.js 
+```
+
+## JJKPP
+Step 1 build in VS 2022
+```bash
+  .\JJKPP.exe -i "path/to/xapk"
 ```

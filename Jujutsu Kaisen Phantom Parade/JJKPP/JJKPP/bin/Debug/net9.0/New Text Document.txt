@@ -1,0 +1,160 @@
+# XAPK Diagnostic Tool
+# Shows what's inside the XAPK and extracts key files for inspection
+
+param(
+    [Parameter(Mandatory=$true)]
+    [string]$XapkPath
+)
+
+if (-not (Test-Path $XapkPath)) {
+    Write-Host "Error: File not found: $XapkPath" -ForegroundColor Red
+    exit 1
+}
+
+Write-Host "=" -NoNewline -ForegroundColor Cyan
+Write-Host ("=" * 70) -ForegroundColor Cyan
+Write-Host " XAPK Diagnostic Tool" -ForegroundColor Cyan
+Write-Host "=" -NoNewline -ForegroundColor Cyan
+Write-Host ("=" * 70) -ForegroundColor Cyan
+Write-Host ""
+
+$outputDir = Join-Path $env:TEMP "jjkpp_diagnostic_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
+New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+
+try {
+    # Open XAPK
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $xapk = [System.IO.Compression.ZipFile]::OpenRead($XapkPath)
+    
+    Write-Host "[1] APK Files in XAPK:" -ForegroundColor Yellow
+    Write-Host ""
+    
+    $apkEntries = $xapk.Entries | Where-Object { $_.Name -like "*.apk" }
+    
+    if ($apkEntries.Count -eq 0) {
+        Write-Host "  ⚠ No APK files found!" -ForegroundColor Red
+        exit 1
+    }
+    
+    $apkEntries | ForEach-Object {
+        $size = [math]::Round($_.Length / 1MB, 2)
+        Write-Host "  📦 $($_.FullName) ($size MB)" -ForegroundColor White
+    }
+    
+    Write-Host ""
+    Write-Host "[2] Scanning each APK..." -ForegroundColor Yellow
+    Write-Host ""
+    
+    foreach ($apkEntry in $apkEntries) {
+        Write-Host "  Checking: $($apkEntry.Name)" -ForegroundColor Cyan
+        
+        # Extract APK to temp
+        $tempApk = Join-Path $outputDir "$($apkEntry.Name)"
+        $apkStream = $apkEntry.Open()
+        $fileStream = [System.IO.File]::Create($tempApk)
+        $apkStream.CopyTo($fileStream)
+        $fileStream.Close()
+        $apkStream.Close()
+        
+        # Open extracted APK
+        $apkArchive = [System.IO.Compression.ZipFile]::OpenRead($tempApk)
+        
+        # Check for libunity.so
+        $libunity = $apkArchive.Entries | Where-Object { $_.Name -eq "libunity.so" }
+        if ($libunity) {
+            Write-Host "    ✓ libunity.so found: $($libunity.FullName)" -ForegroundColor Green
+            
+            # Extract and scan for version
+            $libPath = Join-Path $outputDir "libunity.so"
+            $libStream = $libunity.Open()
+            $libFileStream = [System.IO.File]::Create($libPath)
+            $libStream.CopyTo($libFileStream)
+            $libFileStream.Close()
+            $libStream.Close()
+            
+            # Scan for version string
+            $bytes = [System.IO.File]::ReadAllBytes($libPath)
+            $text = [System.Text.Encoding]::ASCII.GetString($bytes)
+            
+            # Look for Unity version pattern
+            if ($text -match '(20\d{2}|6000)\.(\d+)\.(\d+)[abfp]\d+') {
+                Write-Host "    🎯 Unity Version: $($matches[0])" -ForegroundColor Green
+            } else {
+                Write-Host "    ⚠ No version string found in libunity.so" -ForegroundColor Yellow
+            }
+        } else {
+            Write-Host "    ✗ libunity.so not found" -ForegroundColor Red
+        }
+        
+        # Check for libil2cpp.so
+        $libil2cpp = $apkArchive.Entries | Where-Object { $_.Name -eq "libil2cpp.so" }
+        if ($libil2cpp) {
+            Write-Host "    ✓ libil2cpp.so found: $($libil2cpp.FullName)" -ForegroundColor Green
+        } else {
+            Write-Host "    ✗ libil2cpp.so not found" -ForegroundColor Red
+        }
+        
+        # Check for metadata
+        $metadata = $apkArchive.Entries | Where-Object { $_.Name -eq "global-metadata.dat" }
+        if ($metadata) {
+            Write-Host "    ✓ global-metadata.dat found: $($metadata.FullName)" -ForegroundColor Green
+            
+            # Extract and parse metadata version
+            $metaPath = Join-Path $outputDir "global-metadata.dat"
+            $metaStream = $metadata.Open()
+            $metaFileStream = [System.IO.File]::Create($metaPath)
+            $metaStream.CopyTo($metaFileStream)
+            $metaFileStream.Close()
+            $metaStream.Close()
+            
+            # Read metadata version
+            $metaBytes = [System.IO.File]::ReadAllBytes($metaPath)
+            if ($metaBytes.Length -ge 8) {
+                $magic = [BitConverter]::ToUInt32($metaBytes, 0)
+                if ($magic -eq 0xFAB11BAF) {
+                    $version = [BitConverter]::ToInt32($metaBytes, 4)
+                    Write-Host "    🎯 Metadata Version: $version" -ForegroundColor Green
+                } else {
+                    Write-Host "    ⚠ Invalid metadata magic: 0x$($magic.ToString('X8'))" -ForegroundColor Yellow
+                }
+            }
+        } else {
+            Write-Host "    ✗ global-metadata.dat not found" -ForegroundColor Red
+        }
+        
+        $apkArchive.Dispose()
+        Write-Host ""
+    }
+    
+    $xapk.Dispose()
+    
+    Write-Host ""
+    Write-Host "[3] Summary:" -ForegroundColor Yellow
+    Write-Host "  Output directory: $outputDir" -ForegroundColor Cyan
+    Write-Host "  Files extracted for inspection" -ForegroundColor Cyan
+    Write-Host ""
+    
+    # Check if we have what we need
+    $hasLibunity = Test-Path (Join-Path $outputDir "libunity.so")
+    $hasMetadata = Test-Path (Join-Path $outputDir "global-metadata.dat")
+    
+    if ($hasLibunity -and $hasMetadata) {
+        Write-Host "  ✓ All required files found!" -ForegroundColor Green
+        Write-Host ""
+        Write-Host "  Next steps:" -ForegroundColor Cyan
+        Write-Host "    1. Check libunity.so for version string manually" -ForegroundColor White
+        Write-Host "    2. Verify metadata magic is correct" -ForegroundColor White
+    } else {
+        Write-Host "  ⚠ Missing required files!" -ForegroundColor Yellow
+        if (-not $hasLibunity) {
+            Write-Host "    - libunity.so not found in any APK" -ForegroundColor Red
+        }
+        if (-not $hasMetadata) {
+            Write-Host "    - global-metadata.dat not found in any APK" -ForegroundColor Red
+        }
+    }
+    
+} catch {
+    Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
+}

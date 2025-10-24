@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "AsmResolver/5.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AsmResolver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AsmResolver.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AsmResolver/5.5.1": {
+      "sha512": "bRmB4wEJWnPGywj8nAHQUaByOui1g5aqaBTwY3t+8YYokae1HZJffBx1p/XShRYJ3+/owHNQX3EPFJ4b+AAkxw==",
+      "type": "package",
+      "path": "asmresolver/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asmresolver.5.5.1.nupkg.sha512",
+        "asmresolver.nuspec",
+        "lib/net6.0/AsmResolver.dll",
+        "lib/net6.0/AsmResolver.xml",
+        "lib/net8.0/AsmResolver.dll",
+        "lib/net8.0/AsmResolver.xml",
+        "lib/netcoreapp3.1/AsmResolver.dll",
+        "lib/netcoreapp3.1/AsmResolver.xml",
+        "lib/netstandard2.0/AsmResolver.dll",
+        "lib/netstandard2.0/AsmResolver.xml",
+        "lib/netstandard2.1/AsmResolver.dll",
+        "lib/netstandard2.1/AsmResolver.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "AsmResolver >= 5.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
+      "projectName": "OffsetFinder",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "AsmResolver": {
+            "target": "Package",
+            "version": "[5.5.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "AsmResolver/5.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AsmResolver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AsmResolver.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommandLineParser/2.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Spectre.Console/0.49.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "OffsetFinder/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AsmResolver": "5.5.1"
+        },
+        "compile": {
+          "bin/placeholder/OffsetFinder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OffsetFinder.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AsmResolver/5.5.1": {
+      "sha512": "bRmB4wEJWnPGywj8nAHQUaByOui1g5aqaBTwY3t+8YYokae1HZJffBx1p/XShRYJ3+/owHNQX3EPFJ4b+AAkxw==",
+      "type": "package",
+      "path": "asmresolver/5.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "asmresolver.5.5.1.nupkg.sha512",
+        "asmresolver.nuspec",
+        "lib/net6.0/AsmResolver.dll",
+        "lib/net6.0/AsmResolver.xml",
+        "lib/net8.0/AsmResolver.dll",
+        "lib/net8.0/AsmResolver.xml",
+        "lib/netcoreapp3.1/AsmResolver.dll",
+        "lib/netcoreapp3.1/AsmResolver.xml",
+        "lib/netstandard2.0/AsmResolver.dll",
+        "lib/netstandard2.0/AsmResolver.xml",
+        "lib/netstandard2.1/AsmResolver.dll",
+        "lib/netstandard2.1/AsmResolver.xml"
+      ]
+    },
+    "CommandLineParser/2.9.1": {
+      "sha512": "OE0sl1/sQ37bjVsPKKtwQlWDgqaxWgtme3xZz7JssWUzg5JpMIyHgCTY9MVMxOg48fJ1AgGT3tgdH5m/kQ5xhA==",
+      "type": "package",
+      "path": "commandlineparser/2.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CommandLine20.png",
+        "License.md",
+        "README.md",
+        "commandlineparser.2.9.1.nupkg.sha512",
+        "commandlineparser.nuspec",
+        "lib/net40/CommandLine.dll",
+        "lib/net40/CommandLine.xml",
+        "lib/net45/CommandLine.dll",
+        "lib/net45/CommandLine.xml",
+        "lib/net461/CommandLine.dll",
+        "lib/net461/CommandLine.xml",
+        "lib/netstandard2.0/CommandLine.dll",
+        "lib/netstandard2.0/CommandLine.xml"
+      ]
+    },
+    "Spectre.Console/0.49.1": {
+      "sha512": "USV+pdu49OJ3nCjxNuw1K9Zw/c1HCBbwbjXZp0EOn6wM99tFdAtN34KEBZUMyRuJuXlUMDqhd8Yq9obW2MslYA==",
+      "type": "package",
+      "path": "spectre.console/0.49.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Spectre.Console.dll",
+        "lib/net6.0/Spectre.Console.xml",
+        "lib/net7.0/Spectre.Console.dll",
+        "lib/net7.0/Spectre.Console.xml",
+        "lib/net8.0/Spectre.Console.dll",
+        "lib/net8.0/Spectre.Console.xml",
+        "lib/netstandard2.0/Spectre.Console.dll",
+        "lib/netstandard2.0/Spectre.Console.xml",
+        "small-logo.png",
+        "spectre.console.0.49.1.nupkg.sha512",
+        "spectre.console.nuspec"
+      ]
+    },
+    "OffsetFinder/1.0.0": {
+      "type": "project",
+      "path": "../OffsetFinder/OffsetFinder.csproj",
+      "msbuildProject": "../OffsetFinder/OffsetFinder.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "CommandLineParser >= 2.9.1",
+      "OffsetFinder >= 1.0.0",
+      "Spectre.Console >= 0.49.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\JJKPP\\JJKPP.csproj",
+      "projectName": "JJKPP",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\JJKPP\\JJKPP.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\JJKPP\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\JJKPP\\OffsetFinder\\OffsetFinder.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "CommandLineParser": {
+            "target": "Package",
+            "version": "[2.9.1, )"
+          },
+          "Spectre.Console": {
+            "target": "Package",
+            "version": "[0.49.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
