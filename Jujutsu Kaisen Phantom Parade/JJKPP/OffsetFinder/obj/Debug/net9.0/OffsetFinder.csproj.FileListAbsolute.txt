@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\bin\Debug\net9.0\OffsetFinder.deps.json
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\bin\Debug\net9.0\OffsetFinder.dll
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\bin\Debug\net9.0\OffsetFinder.pdb
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.sourcelink.json
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.dll
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\refint\OffsetFinder.dll
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\OffsetFinder.pdb
+C:\Users\Administrator\source\repos\Gacha Research\Jujutsu Kaisen Phantom Parade\JJKPP\OffsetFinder\obj\Debug\net9.0\ref\OffsetFinder.dll

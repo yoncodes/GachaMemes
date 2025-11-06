@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "OffsetFinder/1.0.0": {
+        "dependencies": {
+          "AsmResolver": "5.5.1"
+        },
+        "runtime": {
+          "OffsetFinder.dll": {}
+        }
+      },
+      "AsmResolver/5.5.1": {
+        "runtime": {
+          "lib/net8.0/AsmResolver.dll": {
+            "assemblyVersion": "5.5.1.0",
+            "fileVersion": "5.5.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OffsetFinder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AsmResolver/5.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bRmB4wEJWnPGywj8nAHQUaByOui1g5aqaBTwY3t+8YYokae1HZJffBx1p/XShRYJ3+/owHNQX3EPFJ4b+AAkxw==",
+      "path": "asmresolver/5.5.1",
+      "hashPath": "asmresolver.5.5.1.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZCGc19hLywY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\source\\repos\\Gacha Research\\Jujutsu Kaisen Phantom Parade\\JJKPP\\JJKPP\\JJKPP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\asmresolver\\5.5.1\\asmresolver.5.5.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\spectre.console\\0.49.1\\spectre.console.0.49.1.nupkg.sha512"
+  ],
+  "logs": []
+}
