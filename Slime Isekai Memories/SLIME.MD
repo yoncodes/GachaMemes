@@ -14,3 +14,4 @@ python decryptfb.py input-dir output
 - modified it to work with slime isekai
 - build the flatbuffer project in visual studio 2022
 - all credits to [Hiro420](https://github.com/Hiro420) for original source
+
