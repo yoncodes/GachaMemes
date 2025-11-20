@@ -9,4 +9,5 @@
 - Fellow Moon [Link](https://github.com/yoncodes/GachaMemes/blob/main/Fellow%20Moon/FM.md)
 - Heavens Burns Red [Link](https://github.com/yoncodes/GachaMemes/blob/main/Heavens%20Burns%20Red/HBR.MD)
 - Jujutsu Kaisen Phantom Parade [Link](https://github.com/yoncodes/GachaMemes/blob/main/Jujutsu%20Kaisen%20Phantom%20Parade/JJK.MD)
+- Punishing Gray Raven [Link](https://github.com/yoncodes/GachaMemes/blob/main/Punishing%20Gray%20Raven/PGR.MD)
 - Slime Isekai Memories [Link](https://github.com/yoncodes/GachaMemes/blob/main/Slime%20Isekai%20Memories/SLIME.MD)
