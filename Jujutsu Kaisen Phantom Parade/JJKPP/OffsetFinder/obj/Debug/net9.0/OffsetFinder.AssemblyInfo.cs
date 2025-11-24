@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OffsetFinder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+200d49a2bb90371d7e189a37ef67e2f7bd105c9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9c8aad0c5efe598d933e58bb8695aa6b0ea1375")]
 [assembly: System.Reflection.AssemblyProductAttribute("OffsetFinder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OffsetFinder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

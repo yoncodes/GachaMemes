@@ -101,7 +101,7 @@ public static class PatternDatabase
 
         patterns.Add(new WildcardPattern(
             "s_GlobalMetadata",
-            "?? ?? 04 ?? A0 ?? ?? F9 ?? 0C 00 B4 ?? ?? 04 ?? C0 ?? ?? F9"
+            "?? ?? 04 ?? A0 ?? ?? F9 C0 0C 00 B4 ?? ?? 04 ?? C0 ?? ?? F9 08 AC 80 B9"
         ));
 
         patterns.Add(new WildcardPattern(
@@ -111,14 +111,14 @@ public static class PatternDatabase
 
         patterns.Add(new WildcardPattern(
             "jjk_encryption_key_ref",
-            "?? ?? 02 ?? E8 03 1F AA 29 ?? ?? 91"
+            "C9 ?? ?? ?? E8 03 1F AA 29 ?? ?? 91 0A 19 40 92"
         ));
 
         return patterns;
     }
 
     /// <summary>
-    /// Jujutsu Kaisen Phantom Parade (Japan) — tested, known patterns
+    /// Jujutsu Kaisen Phantom Parade (Global) — tested, known patterns
     /// </summary>
     private static List<WildcardPattern> GetJJKGLPatterns(int metadataVersion)
     {
